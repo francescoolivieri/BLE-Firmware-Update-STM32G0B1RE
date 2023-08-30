@@ -1,0 +1,5 @@
+flash_manager.c:13:6:setStartPageAddress	4
+flash_manager.c:36:6:Write_FW_to_flash	4
+flash_manager.c:63:6:Prepare_Application_Memory	7
+flash_manager.c:139:6:Set_FLASH_Protection	2
+flash_manager.c:168:6:go2App	5

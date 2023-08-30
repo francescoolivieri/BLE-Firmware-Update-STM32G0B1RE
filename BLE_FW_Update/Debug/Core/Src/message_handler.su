@@ -1,0 +1,8 @@
+../Core/Src/message_handler.c:47:6:data_handler	104	static
+../Core/Src/message_handler.c:235:6:verify_data_type	32	static
+../Core/Src/message_handler.c:299:6:send_ack	88	static
+../Core/Src/message_handler.c:367:9:sum_payload	24	static
+../Core/Src/message_handler.c:378:6:init_crypto	8	static
+../Core/Src/message_handler.c:387:6:decrypt_data	112	dynamic
+../Core/Src/message_handler.c:432:6:encrypt_data	120	dynamic
+../Core/Src/message_handler.c:495:6:checkFWSize	32	static

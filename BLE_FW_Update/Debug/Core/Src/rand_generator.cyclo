@@ -1,0 +1,2 @@
+rand_generator.c:12:6:init_rand_generator	1
+rand_generator.c:16:9:get_rand_byte	2

@@ -1,0 +1,11 @@
+bluenrg_updater_aci.c:27:12:aci_updater_start	1
+bluenrg_updater_aci.c:43:12:aci_updater_reboot	1
+bluenrg_updater_aci.c:59:12:aci_get_updater_version	2
+bluenrg_updater_aci.c:80:12:aci_get_updater_buffer_size	2
+bluenrg_updater_aci.c:101:12:aci_erase_blue_flag	2
+bluenrg_updater_aci.c:118:12:aci_reset_blue_flag	2
+bluenrg_updater_aci.c:135:12:aci_updater_erase_sector	2
+bluenrg_updater_aci.c:157:12:aci_updater_program_data_block	3
+bluenrg_updater_aci.c:186:12:aci_updater_read_data_block	3
+bluenrg_updater_aci.c:217:12:aci_updater_calc_crc	2
+bluenrg_updater_aci.c:246:12:aci_updater_hw_version	2

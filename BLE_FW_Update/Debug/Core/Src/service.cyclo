@@ -1,0 +1,6 @@
+service.c:33:12:add_FW_Update_Service	4
+service.c:70:6:Update_TX_Char	3
+service.c:87:6:GAP_ConnectionComplete_CB	2
+service.c:100:6:GAP_DisconnectionComplete_CB	3
+service.c:125:6:Attribute_Modified_CB	4
+service.c:148:6:HCI_Event_CB	9

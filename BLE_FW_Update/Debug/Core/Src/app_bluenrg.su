@@ -1,0 +1,3 @@
+../Core/Src/app_bluenrg.c:34:19:BlueNRG_Init	56	static
+../Core/Src/app_bluenrg.c:102:6:BlueNRG_Process	8	static
+../Core/Src/app_bluenrg.c:113:6:Enable_Advertising	56	static
