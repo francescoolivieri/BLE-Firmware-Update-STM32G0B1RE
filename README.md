@@ -1,10 +1,10 @@
 # BLE-Firmware-Update-STM32G0B1RE
-Code for performing a firmware update through Bluetooth 4.2 (BLE), this project contains the code for both host and peripheral side.
+Code for performing a firmware update through Bluetooth 4.2 (BLE), this project contains the code for both host (in this case simulated with an STM32G0B1RE) and peripheral side.
 
 ## Project Components
  - STM32G0B1RE
  - X-NUCLEO-IDB05A1
- - Computer equipped with a BLE module
+ - Computer equipped with Dual Mode Bluetooth
 
 ## Project layout
 
@@ -14,3 +14,5 @@ Code for performing a firmware update through Bluetooth 4.2 (BLE), this project 
 └── Python_GUI        	# folder containing code for GUI (host side) 
     
 ```
+  
+Inside each folder you will find more informations about that specific topic.
