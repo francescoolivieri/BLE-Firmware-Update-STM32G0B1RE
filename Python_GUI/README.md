@@ -2,7 +2,7 @@
 Implementation of a GUI with Python QT module to ease the firmware upload operation. The back-end uses the bleak python module to handle the Bluetooth Low Energy communication.  
 
     
-⚠️**NOTICE⚠️ :**  This version is built to work esclusively with [this](https://github.com/francescoolivieri/BLE-Firmware-Update-STM32G0B1RE/blob/main/README.md#communication-protocol) specific communication protocol and interact with a specific Bluetooth Low Energy Service as shown [here](https://github.com/francescoolivieri/BLE-Firmware-Update-STM32G0B1RE/blob/main/BLE_FW_Update/README.md#fsm-state-setup-ble).
+⚠️**NOTICE⚠️ :**  This version is built to work esclusively with [this](https://github.com/francescoolivieri/BLE-Firmware-Update-STM32G0B1RE/blob/main/README.md#communication-protocol) specific communication protocol and interact with a specific Bluetooth Low Energy Service as shown [here](https://github.com/francescoolivieri/BLE-Firmware-Update-STM32G0B1RE/blob/main/BLE_FW_Update/README.md#fsm-state---setup-ble).
 
 ## Screen
 <p align="center">
