@@ -8,3 +8,13 @@ This bootloader aim to demonstrate how a firmware update could be performed in a
 ### FSM STATE - FIRMWARE UPLOAD
 When the system is performing a firmware upload (the peripheral is receveing a new firmware, so downloading for its point of view), it will follow the communication protocol descripted **here**.  
 In case of error in the transmission it will delete all the code received and check for new authorized connections.
+
+### FSM STATE - SETUP BLE
+To perform a communication between the host and slave of the communication I decided to build an ad-hoc Service with two charateristics: TX-Characteristic and RX-Characteristic.
+
+<p align="center">
+  <img width="300" height="422.63" src="https://github.com/francescoolivieri/BLE-Firmware-Update-STM32G0B1RE/assets/113623927/18513506-233a-4f55-b607-8f7ba2e2b44d">
+</p>
+
+-  **TX-Characteristic:** used by the master to transmit information to the device. This characteristic is disposed of the Notify property, this enables the master to send data to the slave device without the latter's explicit request. One of the key features of the notify property is the one-way communication, no response is required. This is useful since we are using a cumulative ACK protocol (see [here](https://github.com/francescoolivieri/BLE-Firmware-Update-STM32G0B1RE/blob/main/README.md#communication-protocol) for more detail about the communication protocol).
+-  **RX-Characteristic:** used by the slave to transmit information to the master. This characteristic has the Write Without Response and Write property that enables the slave to send packets without receveing the response on the same characteristic.
