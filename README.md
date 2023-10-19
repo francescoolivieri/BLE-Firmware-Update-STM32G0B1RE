@@ -46,6 +46,7 @@ In the "Firmware Packet Response" there are is a 3-byte length field called "RAN
 </p>
 
 ### FSM STATES - COMMUNICATION LOGIC
+This is final state machine summarizes how I decided to implement the logic flow of the communication when receveing new firmware. 
 
 <p align="center">
   <img width="600" height="125" src="https://github.com/francescoolivieri/BLE-Firmware-Update-STM32G0B1RE/assets/113623927/d09983fa-91b0-4000-9def-7a66b43a3570">
