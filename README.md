@@ -29,6 +29,12 @@ The communication process begins with a request from the master of the connectio
   <img width="300" height="386.55" src="https://github.com/francescoolivieri/BLE-Firmware-Update-STM32G0B1RE/assets/113623927/7c4f8c41-1cfe-498a-b417-5d3cdce43624">
    </p>
 
+**FW UPLOAD REQ** -> Firmware Upload Request  
+**ACK** -> Firmware Packet Response  
+**NEW_FW\[x\]** -> Firmware Packet   
+
+See [here](#packet-types) how those packets are built.
+
 #### Security
 To secure this communication I chose the AES GCM AEAD, an authenticated encryption which provides data confidentiality, integrity, and availability.  
 In the packets "Firmware Packet" ad "Firmware Packet Response" you can find a 4-byte length field called "TAG", which is the part of the protocol that provide the authentication on the whole packet (headers included).  
