@@ -44,3 +44,8 @@ In the "Firmware Packet Response" there are is a 3-byte length field called "RAN
 <p align="center">
   <img width="600" height="125" src="https://github.com/francescoolivieri/BLE-Firmware-Update-STM32G0B1RE/assets/113623927/d09983fa-91b0-4000-9def-7a66b43a3570">
 </p>
+
+- **Idle:** the device is advertising, no connection has been established and no message is expected
+- **Connected:** a connection is established, and the device is ready to receive and process incoming requests. An important check is done on the correctness of the request and on new firmware size constraints.
+- **Receveing Firmware:** upon receiving and acknowledging a valid Firmware Upload Request, the peripheral enters this state. The device is now ready to receive firmware packets and send firmware packet response.
+- **Closing Connection:** after the successful receipt and verification of the new firmware, the device enters this state. At this point, the device terminates the connection and jumps to the newly received firmware stored in flash memory
