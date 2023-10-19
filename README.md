@@ -22,12 +22,17 @@ An ad-hoc communication has been designed and implemented in order to rule the c
 This protocol could be easily be adapted to serve other purposes, by sending another type of command in the first field of the request (CMD) but in this project we are not interested in this.
 
 ### Communication Flow
-This protocol implements an Cumulative Acknowledgment, with a cumulative block of 16 packets. This choice was taken to fight the poorness of payload (better performances) and the energy related topic (less message in the total communication). 
-The communication starts with a request from the master of the connection to the slave (periperhal in our case), based on the type of request the communication will take a specific path with specific aim.
+This protocol implements a Cumulative Acknowledgment mechanism with a cumulative block size of 16 packets. This choice was made to address two important topics: the limitation of 20-byte size packets and the reduction of total messages in the communication (less energy in the communication required).  
+The communication process begins with a request from the master of the connection to the slave (periperhal in our case), based on the type of request the communication will take a specific path with its own purpose which in our case is performing a secure firmware update.
 
 <p align="center">
   <img width="300" height="386.55" src="https://github.com/francescoolivieri/BLE-Firmware-Update-STM32G0B1RE/assets/113623927/7c4f8c41-1cfe-498a-b417-5d3cdce43624">
    </p>
+
+#### Security
+To secure this communication I chose the AES GCM AEAD, an authenticated encryption which provides data confidentiality, integrity, and availability.  
+In the packets "Firmware Packet" ad "Firmware Packet Response" you can find a 4-byte length field called "TAG", which is the part of the protocol that provide the authentication on the whole packet (headers included).  
+In the "Firmware Packet Response" there are is a 3-byte length field called "RAND_NUM", which are used by both master and slave to modify their IV in synchrony enabling to have different ciphertext even when sending the same firmware over-the-air repeatedly.
 
 #### Packet Types
 <p align="center">
