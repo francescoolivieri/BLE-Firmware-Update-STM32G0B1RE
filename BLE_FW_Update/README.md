@@ -1,6 +1,8 @@
 # Bootloader for STM32G0B1RE
 Implementation of a bootloader for STM32G0B1RE, placed in the first address of the FLASH memory (0x0800 0000) while the applications (max 2) uploaded will be placed in the second sector of the FLASH memory.  
-This bootloader aim to demonstrate how a firmware update could be performed in a secure manner through Bluetooth Low Energy, in this case we used the module X-NUCLEO-IDB05A1. I do not recommend to use this BLE module for this type of project since it does not support Data Length Extension (DLE), hence the maximum payload size available at Application Layer is 20 bytes.
+This bootloader aim to demonstrate how a firmware update could be performed in a secure manner through Bluetooth Low Energy, in this case we used the module X-NUCLEO-IDB05A1. I do not recommend to use this BLE module for this type of project since it does not support Data Length Extension (DLE), hence the maximum payload size available at Application Layer is 20 bytes.  
+
+⚠️**NOTICE⚠️ :**  This version is built to work esclusively with a STM32G0B1RE device, however it could be easily modified to fit others MCU.
 
 ## FSM STATES - BOOTING LOGIC 
 ![Frame 10 (2)](https://github.com/francescoolivieri/BLE-Firmware-Update-STM32G0B1RE/assets/113623927/d24426d0-c5a1-415d-8a8b-da7c5238e0ff)
